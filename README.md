@@ -1,6 +1,6 @@
 # dotfiles
 
-**Warning**: Don’t blindly use my config unless you know what that entails. Use at your own risk!
+**⚠️ Warning**: Don’t blindly use my config unless you know what that entails. Use at your own risk!
 
 ## To-do
 
