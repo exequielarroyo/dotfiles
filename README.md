@@ -20,6 +20,7 @@
 
 - you can use scoop [github.com/ScoopInstaller/Scoop](https://github.com/ScoopInstaller/Scoop)
 - or winget [github.com/microsoft/winget-cli](https://github.com/microsoft/winget-cli)
+- or chocolatey [github.com/chocolatey/choco](https://github.com/chocolatey/choco)
 
 - [ ] add powershell config
 
