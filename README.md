@@ -8,3 +8,4 @@
 - [ ] add powershell
 
 This is repo will provide all configuration of my personal development environment.
+Just twicking stuff 🧑‍💻. Will update soon 😊.
