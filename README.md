@@ -10,8 +10,8 @@
 
 - [ ] add how-to
 
-- [ ] add fish
-- [ ] add nvim
+- [x] add fish
+- [x] add nvim
 - [ ] add tmux
 
 ### scripts for Windows (preferably windows 11)
