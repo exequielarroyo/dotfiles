@@ -12,7 +12,7 @@
 
 - [x] add fish
 - [x] add nvim
-- [ ] add tmux
+- [x] add tmux
 
 ### scripts for Windows (preferably windows 11)
 
