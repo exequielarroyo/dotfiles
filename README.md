@@ -22,7 +22,7 @@
 - or winget [github.com/microsoft/winget-cli](https://github.com/microsoft/winget-cli)
 - or chocolatey [github.com/chocolatey/choco](https://github.com/chocolatey/choco)
 
-- [ ] add powershell config
+- [x] add powershell config
 
 This is repo will provide all configuration of my personal development environment.\
 Just twicking stuff 🧑‍💻. Will update shortly 😊.
