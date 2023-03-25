@@ -8,7 +8,6 @@ local ensure_packer = function()
     end
     return false
 end
-
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
@@ -24,7 +23,7 @@ return require('packer').startup(function(use)
     }
     use {
         'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -66,6 +65,7 @@ return require('packer').startup(function(use)
                 -- your configuration comes here
                 -- or leave it empty to use the default settings
                 -- refer to the configuration section below
+                -- TODO: modify configuration
             }
         end
     }
