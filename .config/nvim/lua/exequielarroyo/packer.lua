@@ -21,9 +21,10 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use 'nvim-tree/nvim-web-devicons'
     use {
         'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+        -- requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -61,16 +62,16 @@ return require('packer').startup(function(use)
         "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
     }
-    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional
-        },
+    use {'akinsho/bufferline.nvim', tag = "v3.*",
+    -- requires = 'nvim-tree/nvim-web-devicons'
     }
-    -- Automatically set up your configuration after cloning packer.nvim
-    -- Put this at the end after all plugins
-    if packer_bootstrap then
-        require('packer').sync()
-    end
+    use {
+    'nvim-tree/nvim-tree.lua',
+    -- requires = { 'nvim-tree/nvim-web-devicons', -- optional }
+    }
+-- Automatically set up your configuration after cloning packer.nvim
+-- Put this at the end after all plugins
+if packer_bootstrap then
+    require('packer').sync()
+end
 end)
