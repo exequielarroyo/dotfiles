@@ -25,6 +25,8 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+vim.opt.fileformats = 'dos,unix'
+vim.opt.fileformat = 'dos'
 
 -- plugin map
 -- vim.keymap.set('n', '<C-p', vim.cmd.Gitsigns
