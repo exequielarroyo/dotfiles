@@ -39,5 +39,9 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 
-  autotag = { enable = true, filetype = { 'blade', 'php' }}
+  autotag = { enable = true, filetype = { 'blade', 'php' }},
+
+  context_commentstring = {
+    enable = true
+  }
 }
