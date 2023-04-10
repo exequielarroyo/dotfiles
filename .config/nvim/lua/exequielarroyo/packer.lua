@@ -72,6 +72,7 @@ return require('packer').startup(function(use)
     use 'goolord/alpha-nvim'
     use "windwp/nvim-autopairs"
     use "windwp/nvim-ts-autotag"
+    use "numToStr/Comment.nvim"
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
 if packer_bootstrap then
