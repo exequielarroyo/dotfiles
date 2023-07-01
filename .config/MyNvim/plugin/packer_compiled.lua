@@ -79,6 +79,17 @@ _G.packer_plugins = {
     path = "/Users/exequielarroyo/.local/share/MyNvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/exequielarroyo/.local/share/MyNvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/exequielarroyo/.local/share/MyNvim/site/pack/packer/opt/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/exequielarroyo/.local/share/MyNvim/site/pack/packer/start/packer.nvim",
