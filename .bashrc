@@ -120,12 +120,12 @@ fi
 alias nvim-mine="NVIM_APPNAME=MyNvim nvim"
 
 nvims() {
-  items=("default" "MyNvim")
+  items=("Default" "MyNvim")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt="select config:" --height=50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
     return 0
-  elif [[ $config == "default" ]]; then
+  elif [[ $config == "Default" ]]; then
     config=""
   fi
   NVIM_APPNAME=$config nvim $@
