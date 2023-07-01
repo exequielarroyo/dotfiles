@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/Users/exequielarroyo/.local/share/MyNvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/exequielarroyo/.local/share/MyNvim/site/pack/packer/start/packer.nvim",
