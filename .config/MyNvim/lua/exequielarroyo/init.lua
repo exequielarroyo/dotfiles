@@ -2,12 +2,6 @@ print("neovim configuration sourced 😊")
 
 require('exequielarroyo.remap')
 
--- EDITOR SETTINGS
-vim.wo.number = true
-vim.opt.wrap = false
-vim.opt.relativenumber = true
-vim.opt.hlsearch = false --equivalent to command ":noh"
-
 -- PACKER
 local ensure_packer = function()
   local fn = vim.fn
@@ -23,26 +17,54 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-	use 'wbthomason/packer.nvim'
-	-- My plugins here
-	-- use 'foo1/bar1.nvim'
-	-- use 'foo2/bar2.nvim'
+    use 'wbthomason/packer.nvim'
+    -- My plugins here
+    -- use 'foo1/bar1.nvim'
+    -- use 'foo2/bar2.nvim'
 
-	-- MY INSTALLED PLUGINS
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.2',
-		-- or                            , branch = '0.1.x',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
-	use 'lewis6991/gitsigns.nvim'
-	use {
-		'nvim-lualine/lualine.nvim',
-		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-	}
+    -- MY INSTALLED PLUGINS
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.2',
+        -- or                            , branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    use 'lewis6991/gitsigns.nvim'
+    use 'tpope/vim-fugitive'
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+    use 'Mofiqul/vscode.nvim' -- colorscheme
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+    use 'theprimeagen/harpoon'
+    use 'theprimeagen/vim-be-good' -- vim practice
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v2.x',
+        requires = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},             -- Required
+            {                                      -- Optional
+                'williamboman/mason.nvim',
+                run = function()
+                    pcall(vim.cmd, 'MasonUpdate')
+                end,
+            },
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-	-- Automatically set up your configuration after cloning packer.nvim
-	-- Put this at the end after all plugins
-	if packer_bootstrap then
-		require('packer').sync()
-	end
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},     -- Required
+            {'hrsh7th/cmp-nvim-lsp'}, -- Required
+            {'L3MON4D3/LuaSnip'},     -- Required
+        }
+    }
+
+    -- Automatically set up your configuration after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if packer_bootstrap then
+        require('packer').sync()
+    end
 end)
