@@ -13,6 +13,7 @@
 - [x] add fish
 - [x] add nvim
 - [x] add tmux
+- [x] add bash
 
 ### scripts for Windows (preferably windows 11)
 
