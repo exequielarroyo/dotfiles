@@ -5,12 +5,12 @@ return {
 	-- For dark theme (neovim's default)
 	vim.o.background = 'dark'
 	-- For light theme
-	-- vim.o.background = 'light'
+	--vim.o.background = 'light'
 
 	local c = require('vscode.colors').get_colors()
 	require('vscode').setup({
 	    -- Alternatively set style in setup
-	    -- style = 'light'
+	    --style = 'light',
 
 	    -- Enable transparent background
 	    transparent = true,
@@ -19,7 +19,7 @@ return {
 	    italic_comments = true,
 
 	    -- Disable nvim-tree background color
-	    disable_nvimtree_bg = true,
+	    disable_nvimtree_bg = false,
 
 	    -- Override colors (see ./lua/vscode/colors.lua)
 
