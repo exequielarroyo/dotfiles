@@ -2,7 +2,24 @@ return {
     { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x', },
     { 'neovim/nvim-lspconfig' },
     { 'hrsh7th/cmp-nvim-lsp' },
-    { 'hrsh7th/nvim-cmp' },
+    {
+        'hrsh7th/nvim-cmp',
+        config = function()
+            require 'cmp'.setup {
+                snippet = {
+                    expand = function(args)
+                        require 'luasnip'.lsp_expand(args.body)
+                    end
+                },
+
+                sources = {
+                    { name = 'luasnip' },
+                    -- more sources
+                },
+            }
+        end
+    },
+    { 'saadparwaiz1/cmp_luasnip' },
     { 'L3MON4D3/LuaSnip' },
     { 'williamboman/mason.nvim' },
     {
@@ -17,9 +34,9 @@ return {
                 lsp_zero.default_keymaps({ buffer = bufnr })
             end)
 
-            require('lspconfig').pasls.setup({
-                cmd = { "C:/FPC/pls/lib/x86_64-win64/pasls.exe" },
-            })
+            --require('lspconfig').pasls.setup({
+            --    cmd = { "C:/FPC/pls/lib/x86_64-win64/pasls.exe" },
+            --})
 
             --require('lspconfig').lua_ls.setup({})
             require('mason').setup({})
