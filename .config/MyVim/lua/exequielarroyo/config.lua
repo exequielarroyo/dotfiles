@@ -1,4 +1,4 @@
-print('sourced 🫡')
+--print('sourced 🫡')
 
 vim.g.mapleader = ' '
 --vim.g.maplocalleader = ' '
@@ -7,6 +7,9 @@ vim.opt.relativenumber = true
 --vim.opt.hlsearch = false
 vim.opt.wrap = false
 vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
 vim.opt.cursorline = true
 
 vim.keymap.set('n', '<leader>rh', ':nohlsearch<CR>')
