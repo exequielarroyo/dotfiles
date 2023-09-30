@@ -1,3 +1,4 @@
+--LSP CONFIGURATION
 return {
     { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x', },
     { 'neovim/nvim-lspconfig' },
@@ -34,9 +35,9 @@ return {
                 lsp_zero.default_keymaps({ buffer = bufnr })
             end)
 
-            --require('lspconfig').pasls.setup({
-            --    cmd = { "C:/FPC/pls/lib/x86_64-win64/pasls.exe" },
-            --})
+            require('lspconfig').pasls.setup({
+                cmd = { "C:/FPC/pls/bin/pasls.exe" },
+            })
 
             --require('lspconfig').lua_ls.setup({})
             require('mason').setup({})
