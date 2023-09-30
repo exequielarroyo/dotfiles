@@ -15,3 +15,5 @@ vim.opt.cursorline = true
 vim.keymap.set('n', '<leader>rh', ':nohlsearch<CR>')
 vim.keymap.set('n', '<leader>so', ':so<Enter>')
 vim.keymap.set('n', '<leader>pv', vim.cmd.Explore)
+
+--vim.keymap.set('n', '<C>b', vim.)
