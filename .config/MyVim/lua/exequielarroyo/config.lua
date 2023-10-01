@@ -1,7 +1,8 @@
+--NEOVIM CONFIGURATION
 --print('sourced 🫡')
 
 vim.g.mapleader = ' '
---vim.g.maplocalleader = ' '
+vim.g.maplocalleader = ' '
 vim.wo.number = true
 vim.opt.relativenumber = true
 --vim.opt.hlsearch = false
@@ -13,7 +14,6 @@ vim.opt.expandtab = true
 vim.opt.cursorline = true
 
 vim.keymap.set('n', '<leader>rh', ':nohlsearch<CR>')
-vim.keymap.set('n', '<leader>so', ':so<Enter>')
+vim.keymap.set('n', '<leader>so', ':so<CR>')
 vim.keymap.set('n', '<leader>pv', vim.cmd.Explore)
-
---vim.keymap.set('n', '<C>b', vim.)
+vim.keymap.set('n', '<leader>e', ':edit<CR>')
