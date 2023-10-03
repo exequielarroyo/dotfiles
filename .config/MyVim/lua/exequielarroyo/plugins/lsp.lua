@@ -6,15 +6,19 @@ return {
     {
         'hrsh7th/nvim-cmp',
         config = function()
+            local capabilities = require('cmp_nvim_lsp').default_capabilities();
+
             require 'cmp'.setup {
+                capabilities = capabilities,
                 snippet = {
                     expand = function(args)
                         require 'luasnip'.lsp_expand(args.body)
                     end
                 },
-
                 sources = {
                     { name = 'luasnip' },
+                    { name = 'buffer' },
+                    { name = 'nvim_lsp' },
                     -- more sources
                 },
             }
