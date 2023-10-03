@@ -13,7 +13,7 @@ return {
             --style = 'light',
 
             -- Enable transparent background
-            transparent = true,
+            transparent = false,
 
             -- Enable italic comment
             italic_comments = true,
@@ -22,6 +22,9 @@ return {
             disable_nvimtree_bg = false,
 
             -- Override colors (see ./lua/vscode/colors.lua)
+            color_overrides = {
+                -- vscLineNumber = '#FFFFFF',
+            },
 
             -- Override highlight groups (see ./lua/vscode/theme.lua)
             group_overrides = {

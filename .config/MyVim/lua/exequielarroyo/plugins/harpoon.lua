@@ -1,3 +1,4 @@
+--HARPOON CONFIGURATION
 return {
     'ThePrimeagen/harpoon',
     config = function()
