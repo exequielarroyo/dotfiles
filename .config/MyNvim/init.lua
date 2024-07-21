@@ -44,7 +44,7 @@ local plugins = {
 	{ 'hrsh7th/nvim-cmp' },
 	{ 'L3MON4D3/LuaSnip' },
 	{ 'Mofiqul/vscode.nvim' },
-	{ 'tpope/vim-commentary' },
+	-- { 'tpope/vim-commentary' },
 	-- { 'numToStr/Comment.nvim' },
 	{ 'nvim-treesitter/nvim-treesitter' },
 	{ 'EdenEast/nightfox.nvim' },
@@ -76,6 +76,8 @@ local plugins = {
 	{ 'norcalli/nvim-colorizer.lua' },
 
 	{ 'rafamadriz/friendly-snippets' },
+
+	{ 'nvim-neorg/neorg' },
 }
 
 require("lazy").setup(plugins, opts)
@@ -126,6 +128,7 @@ dap.listeners.before.event_exited.dapui_config = function()
   dapui.close()
 end
 
+require('neorg').setup()
 
 local lsp_zero = require('lsp-zero')
 lsp_zero.set_sign_icons({
@@ -204,6 +207,7 @@ vim.keymap.set('n', '<C-n>', function() ui.nav_file(3) end)
 vim.keymap.set('n', '<C-s>', function() ui.nav_file(4) end)
 
 require("lspconfig").lua_ls.setup{}
+require("lspconfig").tailwindcss.setup{}
 require("lspconfig").angularls.setup{}
 require("lspconfig").tsserver.setup{}
 require("lspconfig").jsonls.setup{}
@@ -227,6 +231,7 @@ require("nightfox").setup({
 require("tokyonight").setup({
     transparent = true,
 })
+
 vim.opt.background = "dark"
 -- vim.cmd.colorscheme "vscode"
 -- vim.cmd.colorscheme "dawnfox"
