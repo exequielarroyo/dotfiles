@@ -26,8 +26,15 @@ vim.opt.shiftwidth = 4                  -- number of spaces used in <Tab>
 vim.opt.showtabline = 2                 -- display tab
 vim.opt.sidescrolloff = 8
 vim.opt.signcolumn = 'auto'             -- a way to resize lsp sign column "auto:[1-2]"
-
-vim.opt.visualbell = true
+vim.opt.smoothscroll = false            -- not sure what it does
+vim.opt.spell = false                   -- could be useful
+vim.opt.termguicolors = true            -- put colors to text
+vim.opt.title = true
+vim.opt.titlestring = 'Powershell'
+vim.opt.visualbell = true               -- notification sound to visual
+vim.opt.wildmenu = true                 -- learn more
+vim.opt.winblend = 100                  -- transparency on menu
+vim.opt.wrap = false
 
 vim.keymap.set('n', 'gl', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>gc', vim.lsp.get_clients)
