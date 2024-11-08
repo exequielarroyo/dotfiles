@@ -13,6 +13,7 @@ vim.opt.hlsearch = true
 vim.opt.icon = true
 vim.opt.iconstring = '😀'
 vim.opt.keywordprg = ':Man'
+vim.opt.linebreak = true
 -- vim.opt.loadplugins = false          -- this disables netrw
 vim.opt.mouse = 'n'
 vim.opt.number = true
@@ -30,8 +31,8 @@ vim.opt.smoothscroll = false            -- not sure what it does
 vim.opt.spell = false                   -- could be useful
 vim.opt.termguicolors = true            -- put colors to text
 vim.opt.title = true
-vim.opt.titlestring = 'Powershell'
-vim.opt.visualbell = true               -- notification sound to visual
+vim.opt.titlestring = '💻'
+vim.opt.visualbell = false               -- notification sound to visual
 vim.opt.wildmenu = true                 -- learn more
 vim.opt.winblend = 100                  -- transparency on menu
 vim.opt.wrap = false
@@ -48,3 +49,11 @@ vim.keymap.set('n', '<leader>e', vim.cmd.Explore)
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv") --moving selected lines
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv") --moving selected lines
 vim.keymap.set('n', '<leader>pc', ':echo stdpath("config")') --printing config location
+
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = 'markdown',
+    callback = function()
+        vim.opt.wrap = true
+    end,
+})
+
